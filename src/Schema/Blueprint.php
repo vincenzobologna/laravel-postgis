@@ -159,4 +159,14 @@ class Blueprint extends \Bosnadev\Database\Schema\Blueprint
         return $this->addCommand('disablePostgisIfExists');
     }
 
+    public function pointz($column, $geomtype = 'GEOGRAPHY', $srid = '4326'){
+        return $this->addColumn('pointz', $column, compact('geomtype', 'srid'));
+    }
+    public function linestringz($column, $geomtype = 'GEOGRAPHY', $srid = '4326'){
+        return $this->addColumn('linestringz', $column, compact('geomtype', 'srid'));
+    }
+    public function multipointz($column, $geomtype = 'GEOGRAPHY', $srid = '4326'){
+        return $this->addColumn('multipointz', $column, compact('geomtype', 'srid'));
+    }
+    
 }

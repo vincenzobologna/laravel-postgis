@@ -223,4 +223,14 @@ class PostgisGrammar extends PostgresGrammar
         }
     }
 
+    public function typePointZ(Fluent $column){
+        return $this->createTypeDefinition($column, 'POINTZ');
+    }
+    public function typeMultipointZ(Fluent $column){
+        return $this->createTypeDefinition($column, 'MULTIPOINTZ');
+    }
+    public function typeLinestringZ(Fluent $column){
+        return $this->createTypeDefinition($column, 'LINESTRINGZ');
+    }
+
 }
