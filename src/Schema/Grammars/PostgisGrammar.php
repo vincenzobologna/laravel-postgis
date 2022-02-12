@@ -232,5 +232,8 @@ class PostgisGrammar extends PostgresGrammar
     public function typeLinestringZ(Fluent $column){
         return $this->createTypeDefinition($column, 'LINESTRINGZ');
     }
+    public function typePolygonZ(Fluent $column){
+        return $this->createTypeDefinition($column, 'POLYGONZ');
+    }
 
 }

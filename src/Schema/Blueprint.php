@@ -168,5 +168,8 @@ class Blueprint extends \Bosnadev\Database\Schema\Blueprint
     public function multipointz($column, $geomtype = 'GEOGRAPHY', $srid = '4326'){
         return $this->addColumn('multipointz', $column, compact('geomtype', 'srid'));
     }
+    public function polygonz($column, $geomtype = 'GEOGRAPHY', $srid = '4326'){
+        return $this->addColumn('polygonz', $column, compact('geomtype', 'srid'));
+    }
     
 }
